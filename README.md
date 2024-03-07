@@ -13,7 +13,7 @@ Despite promising results, we acknowledge the potential for further improvement 
 The testing code provided here allows for independent evaluation of our method's performance.
 
 ### 0. Requirements
-You only need a `torch` installed in your environment.
+You need `torch`, `numpy` and `pillow` installed in your environment.
 
 ### 1. Download dataset and pretrained model
 Download the VIPeR dataset from this url: https://cloud.foreup.top/s/v8RiZ, which has been processed the origin VIPeR to Market1501 formate.
@@ -26,6 +26,6 @@ git clone https://github.com/MiSanl/MDIFF-for-CRReID.git
 
 ### 2. Run test
 ```
-pthon test.py --data /path/to/your/dataset_root_dir --model_path /path/to/your/pretrained/model --gpu GPU_ID
+python test.py --data /path/to/your/dataset_root_dir --model_path /path/to/your/pretrained/model --gpu GPU_ID
 ```
 

@@ -40,10 +40,10 @@ if __name__ == "__main__":
 
     if_FDR = False if args.dataset in ['mlr_market1501', 'mlr_dukemtmc-reid'] else True
     model = Res50_D_MDIFF(num_class=num_classes, FDR=if_FDR)
-    if args.weight != '':
-        param_dict = torch.load(args.weight, map_location='cpu')
+    if args.model_path != '':
+        param_dict = torch.load(args.model_path, map_location='cpu')
         model.load_state_dict(param_dict)
-        logger.info('Loading pretrained model from {} for inference'.format(args.weight))
+        logger.info('Loading pretrained model from {} for inference'.format(args.model_path))
 
     do_inference_separate(model,
                           [query_loader, test_loader],
